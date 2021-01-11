@@ -41,7 +41,9 @@ try:
     while True:
 
         distance = measure_average()
-        print("Distance : %.1f" % distance)
+        print("Distance : %.1f" % sensor.distance)
+        if sensor.distance < 1.0:
+            print("object in the way of vehicle")
         time.sleep(1)
 
 except KeyboardInterrupt:
